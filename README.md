@@ -4,7 +4,12 @@
   
   **Student ID: 202262140 | Assignment 3 – Advanced Functionality**
   
-  *A responsive personal portfolio website built with HTML, CSS, and JavaScript*
+  *A feature-rich portfolio website with GitHub API integration, interactive quiz, and state management*
+  
+  [![GitHub Pages](https://img.shields.io/badge/Live-Demo-green)](https://wajza.github.io/202262140-wajd-alghamdi-assignment3/)
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   
 </div>
 
@@ -12,14 +17,29 @@
 
 ## 📋 Project Description
 
-This is a personal portfolio website built as the starting point for my professional portfolio. The project demonstrates fundamental web development skills including semantic HTML, responsive CSS, and interactive JavaScript features.
+This is a personal portfolio website that showcases my software engineering work. The project demonstrates advanced web development skills including API integration, complex logic implementation, state management, and performance optimization.
 
-The portfolio includes:
-- **About Me section** with a professional introduction and profile image
-- **Projects showcase** featuring 3 of my software engineering projects
-- **Skills section** displaying technical competencies with animated progress bars
-- **Contact form** with client-side validation
-- **Responsive design** that works seamlessly on desktop, tablet, and mobile devices
+### Features Implemented
+
+| Feature | Description | Status |
+|---------|-------------|--------|
+| **API Integration** | Fetches live GitHub repositories using GitHub REST API | ✅ |
+| **Complex Logic** | Combined filter + sort functionality for GitHub repos + Interactive Developer Quiz | ✅ |
+| **State Management** | Persistent dark/light mode, visit counter, session timer, quiz results | ✅ |
+| **Performance** | Lazy loading images, debounced events, optimized CSS animations | ✅ |
+| **Responsive Design** | Works on desktop, tablet, and mobile devices | ✅ |
+| **Form Validation** | Real-time validation with user-friendly error messages | ✅ |
+
+### Portfolio Sections
+
+1. **Hero Section** - Introduction with dynamic time-based greeting
+2. **About Me** - Professional background and education
+3. **Skills** - Technical competencies with animated progress bars
+4. **Projects** - Showcase of 3 software engineering projects with filters
+5. **GitHub Repositories** - Live API integration with filter & sort
+6. **Developer Quiz** - Interactive quiz to find your developer path
+7. **Contact Form** - Validated contact form with submission simulation
+8. **Stats Bar** - Visit counter and session timer (state management)
 
 ---
 
@@ -27,20 +47,22 @@ The portfolio includes:
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- Git (cloning)
+- Git (for cloning)
+- Internet connection (for CDN resources and GitHub API)
 
-### Method : Clone the Repository
+### Method 1: Clone the Repository
 
 ```bash
 # Clone the repository
-git clone https://github.com/Wajza/202262140-WajdAlghamdi-assignment3.git
+git clone https://github.com/Wajza/202262140-wajd-alghamdi-assignment3.git
 
 # Navigate into the project folder
 cd 202262140-wajd-alghamdi-assignment3
 
-# Open index.html in your browser
-start index.html
-```
+# Open index.html in your browser (double-click or use command below)
+start index.html        # Windows
+open index.html         # macOS
+xdg-open index.html     # Linux
 ---
 ## Technologies Used
 - HTML5
@@ -48,9 +70,16 @@ start index.html
 - JavaScript 
 - Font Awesome Icons
 - Google Fonts
+- GitHub REST API
 
 ## AI Tools Used
 This project was developed with assistance from:
 - **ChatGPT**: Code generation, debugging, and documentation
+
+# AI Contribution Summary
+- Code Generation: Initial structure for GitHub API integration, quiz logic, and state management
+- Debugging: Helped identify and fix filter/sort combination logic issues
+- Code Review: Reviewed existing portfolio code and suggested performance optimizations
+- Documentation: Assisted in structuring technical documentation
 
 For detailed AI usage documentation, see [docs/ai-usage-report.md](docs/ai-usage-report.md)

@@ -4,26 +4,83 @@
  * ========================================================
  * 
  * This JavaScript file was developed with assistance from 
- * ChatGPT and then manually customized, tested, 
- * and improved by Wajd Alghamdi
+ * ChatGPT (GPT-4), then manually 
+ * customized, tested, and improved by Wajd Alghamdi
  * 
- * Modifications and enhancements made:
- * - Added comprehensive error handling for all functions
- * - Fixed mobile menu display issues with proper event handling
- * - Enhanced form validation with real-time feedback
- * - Added loading states for better UX
- * - Implemented proper theme persistence with localStorage
- * - Added network status detection (online/offline)
- * - Added keyboard accessibility (Escape key to close menu)
- * - Added swipe gestures for mobile menu
- * - Optimized performance with debouncing
- * - Added proper ARIA attributes for accessibility
- * - Added Assignment 3 features (GitHub API, Quiz, State Management)
- * - All styles are applied via CSS classes, no inline styles
+ * ========================================================
+ * ASSIGNMENT 3 REQUIREMENTS IMPLEMENTED
+ * ========================================================
  * 
- * I have reviewed, tested, and understand every function
- * in this file. AI was used as a learning tool to understand
- * JavaScript patterns and best practices.
+ * 1. API INTEGRATION (Requirement 2)
+ *    - fetchGitHubRepos(): Fetches live data from GitHub REST API
+ *    - populateLanguageFilter(): Dynamically populates filter from API
+ *    - displayRepos(): Renders repositories with error handling
+ *    - Retry button for failed API requests
+ * 
+ * 2. COMPLEX LOGIC (Requirement 3)
+ *    - filterAndSortRepos(): Combined filter + sort functionality
+ *    - Interactive quiz with 3 questions and weighted scoring
+ *    - Conditional result display based on user answers
+ *    - Personalized developer path recommendations
+ * 
+ * 3. STATE MANAGEMENT (Requirement 4)
+ *    - initVisitCounter(): Persistent visit count (localStorage)
+ *    - initSessionTimer(): Session duration (sessionStorage)
+ *    - Theme persistence across browser sessions
+ *    - Quiz result storage with timestamp
+ * 
+ * 4. PERFORMANCE OPTIMIZATIONS (Requirement 5)
+ *    - debounce(): Prevents excessive filter/sort calculations
+ *    - Lazy loading for images below the fold
+ *    - Efficient DOM updates (no unnecessary reflows)
+ *    - Intersection Observer for skill bar animations
+ * 
+ * ========================================================
+ * ORIGINAL FEATURES MAINTAINED & IMPROVED
+ * ========================================================
+ * 
+ * - Mobile menu with swipe gestures and keyboard (Escape) support
+ * - Form validation with real-time feedback and regex patterns
+ * - Smooth scrolling with offset for fixed navigation header
+ * - Dynamic greeting message with typewriter effect
+ * - Theme toggle with rotation animation and system preference detection
+ * - Scroll spy for active navigation highlighting
+ * - Back to top button with smooth behavior
+ * - Newsletter form with email validation
+ * - Network status detection (online/offline notifications)
+ * 
+ * ========================================================
+ * CODE QUALITY STANDARDS FOLLOWED
+ * ========================================================
+ * 
+ * - No inline styles - all styling via CSS classes
+ * - No duplicate code - reusable functions (showNotification, etc.)
+ * - Proper error handling for all async operations
+ * - Consistent naming conventions (camelCase for functions/variables)
+ * - Comprehensive comments for complex logic
+ * - Global functions exposed only when necessary (onclick handlers)
+ * - ES6+ features (async/await, arrow functions, template literals)
+ * 
+ * ========================================================
+ * VERIFICATION & UNDERSTANDING
+ * ========================================================
+ * 
+ * I have reviewed, tested, and understand every function in this file.
+ * 
+ * AI was used as a learning tool to understand:
+ * - Async/await patterns for REST API calls
+ * - localStorage and sessionStorage for state management
+ * - Array methods (filter, sort, map, reduce, Set)
+ * - Event delegation and debouncing techniques
+ * - Intersection Observer API for lazy loading
+ * - DOM manipulation best practices
+ * 
+ * No AI-generated code was used without:
+ * - Full understanding of how it works
+ * - Manual customization to fit my specific portfolio
+ * - Testing in isolation before integration
+ * - Adding appropriate error handling for edge cases
+ * 
  * ========================================================
  */
 

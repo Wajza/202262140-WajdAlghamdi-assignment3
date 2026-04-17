@@ -3,20 +3,64 @@
    ========================================================
    
    This CSS file was developed with assistance from 
-   ChatGPT and then manually customized, tested, 
-   and improved by Wajd Alghamdi
-
-   Modifications and enhancements made:
-   - Created custom color palette with CSS variables for easy theming
-   - Implemented dark/light theme system with smooth transitions
-   - Fixed responsive design issues for all screen sizes
-   - Added custom animations and accessibility features
-   - Added Assignment 3 styles (GitHub section, Quiz, Stats bar)
-   - All styles are contained in CSS (no inline styles)
+   ChatGPT (GPT-4), then manually 
+   customized, tested, and improved by Wajd Alghamdi
+ 
+   ========================================================
+   ASSIGNMENT 3 STYLES ADDED
+   ========================================================
+   
+   1. GITHUB SECTION (API Integration)
+      - .github-section, .github-controls
+      - .repos-grid, .repo-card, .repo-card::before
+      - .repo-filter-select, .repo-sort-select
+      - .loading-spinner, .error-message-repos
+   
+   2. QUIZ SECTION (Complex Logic)
+      - .quiz-section, .quiz-container
+      - .quiz-question, .quiz-options, .quiz-option-btn
+      - .quiz-progress, .quiz-progress-bar, .quiz-progress-fill
+      - .quiz-result, .skill-badge
+   
+   3. STATS BAR (State Management)
+      - .stats-bar (sticky positioning)
+      - .stats-container, .stat-item
+      - Responsive adjustments for mobile
+   
+   ========================================================
+   ORIGINAL FEATURES MAINTAINED & IMPROVED
+   ========================================================
+   
+   - CSS Custom Properties (variables) for easy theming
+   - Dark/light theme system with smooth transitions
+   - Responsive design for all screen sizes (desktop, tablet, mobile)
+   - Custom animations and keyframes (fadeInUp, bounce, rotate, shake)
+   - Accessibility features (focus states, prefers-reduced-motion)
+   - Print-friendly styles
+   - No inline styles - all styling in CSS
+   - Efficient selectors to minimize reflow
+   
+   ========================================================
+   VERIFICATION & UNDERSTANDING
+   ========================================================
    
    I have reviewed, tested, and understand every style rule
-   in this file. AI was used as a learning tool to understand
-   modern CSS techniques and best practices.
+   in this file. AI was used as a learning tool to understand:
+   
+   - CSS Grid and Flexbox for modern layouts
+   - CSS Custom Properties for dynamic theming
+   - Media queries for responsive breakpoints
+   - CSS animations and performance considerations
+   - Pseudo-elements (::before, ::after) for decorative elements
+   - Clamp() for fluid typography
+   - Backdrop-filter for blur effects
+   
+   No AI-generated CSS was used without:
+   - Understanding how each property works
+   - Testing across different screen sizes
+   - Ensuring dark/light theme compatibility
+   - Verifying accessibility standards
+   
    ======================================================== */
 
 /* ===== RESET & BASE STYLES ===== */
