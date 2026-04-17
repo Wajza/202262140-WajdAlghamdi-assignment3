@@ -44,7 +44,7 @@ This is a personal portfolio website that showcases my software engineering work
 - Git (for cloning)
 - Internet connection (for CDN resources and GitHub API)
 
-### Method 1: Clone the Repository
+### Clone the Repository
 
 ```bash
 # Clone the repository
@@ -71,7 +71,7 @@ xdg-open index.html     # Linux
 This project was developed with assistance from:
 - **ChatGPT**: Code generation, debugging, and documentation
 
-# AI Contribution Summary
+## AI Contribution Summary
 - Code Generation: Initial structure for GitHub API integration, quiz logic, and state management
 - Debugging: Helped identify and fix filter/sort combination logic issues
 - Code Review: Reviewed existing portfolio code and suggested performance optimizations
