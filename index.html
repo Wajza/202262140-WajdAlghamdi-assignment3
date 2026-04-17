@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!-- 
-        ========================================================
-        AI DECLARATION - HTML STRUCTURE
-        ========================================================
-        This HTML was initially generated with assistance from 
-        ChatGPT and then manually customized by Wajd Alghamdi
+<!-- 
+    ========================================================
+    AI DECLARATION - HTML STRUCTURE
+    ========================================================
+    This HTML was initially generated with assistance from 
+    ChatGPT and then manually customized by Wajd Alghamdi
+
+    Modifications made:
+    - Added semantic HTML5 elements for accessibility
+    - Customized all content with personal information
+    - Updated image paths to match folder structure
+    - Added proper ARIA labels for screen readers
+    - Implemented responsive meta tags
+    - Added Open Graph tags for social sharing
+    - Optimized resource loading with preconnect and defer
+    - Added Assignment 3 features (GitHub API, Quiz, Stats)
     
-        Modifications made:
-        - Added semantic HTML5 elements for accessibility
-        - Customized all content with personal information
-        - Updated image paths to match folder structure
-        - Added proper ARIA labels for screen readers
-        - Implemented responsive meta tags
-        - Added Open Graph tags for social sharing
-        - Optimized resource loading with preconnect and defer
-        
-        I have reviewed, tested, and understand all code in this file.
-        AI was used as a learning tool to understand semantic HTML
-        structure and accessibility best practices.
-        ========================================================
-    -->
+    I have reviewed, tested, and understand all code in this file.
+    AI was used as a learning tool to understand semantic HTML
+    structure and accessibility best practices.
+    ========================================================
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -43,6 +44,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="assets/images/PFP.png">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
@@ -51,8 +55,8 @@
     
     <!-- Google Fonts with optimization -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" aria-label="Main navigation">
@@ -73,6 +77,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#github-repos" class="nav-link">GitHub</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             
@@ -83,6 +88,27 @@
             </div>
         </div>
     </nav>
+
+    <!-- Stats Bar - State Management -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="fas fa-user-friends"></i>
+                <span id="visitCount">Loading...</span>
+                <small>Total Visits</small>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span id="sessionTimer">0s</span>
+                <small>Session Duration</small>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                <span id="repoCount">0</span>
+                <small>GitHub Repos</small>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero" aria-label="Hero section">
@@ -234,86 +260,134 @@
         </div>
     </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects" aria-label="Projects section">
-    <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <!-- Project filters -->
-        <div class="project-filters" aria-label="Project filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="frontend">Frontend</button>
-            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card" data-category="frontend">
-                <div class="project-image">
-                    <img src="assets/images/KSIH.png" 
-                         alt="KFUPM Student Impact Hub project screenshot"
-                         loading="lazy"
-                         width="400"
-                         height="250">
-                    <div class="project-overlay">
-                        <span>Featured</span>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>KFUPM Student Impact Hub</h3>
-                    <p> A centralized platform designed to connect KFUPM students with volunteering opportunities, campus events, and community initiatives. The hub streamlines student engagement by providing a unified space for discovering activities, tracking impact hours, and collaborating on social projects.</p>
-                    <div class="project-tech">
-                        <span>Figma</span>
-                        <span>Frontend</span>
-                    </div>
-                </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects" aria-label="Projects section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Project filters -->
+            <div class="project-filters" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
             </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="assets/images/KSIH.png" 
+                             alt="KFUPM Student Impact Hub project screenshot"
+                             loading="lazy"
+                             width="400"
+                             height="250">
+                        <div class="project-overlay">
+                            <span>Featured</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>KFUPM Student Impact Hub</h3>
+                        <p>A centralized platform designed to connect KFUPM students with volunteering opportunities, campus events, and community initiatives. The hub streamlines student engagement by providing a unified space for discovering activities, tracking impact hours, and collaborating on social projects.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Frontend</span>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Project 2 -->
-            <div class="project-card" data-category="fullstack">
-                <div class="project-image">
-                    <img src="assets/images/EBS.png" 
-                         alt="Event Booking System screenshot"
-                         loading="lazy"
-                         width="400"
-                         height="250">
-                    <div class="project-overlay">
-                        <span>Popular</span>
+                <!-- Project 2 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="assets/images/EBS.png" 
+                             alt="Event Booking System screenshot"
+                             loading="lazy"
+                             width="400"
+                             height="250">
+                        <div class="project-overlay">
+                            <span>Popular</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Event Booking System</h3>
+                        <p>The Event Booking System is a simple JavaFX application designed to manage registration for various events that requires booking tickets. It allows users to book tickets, view available events, and view booked tickets. The system also provides administrative features for adding, updating, or deleting course events.</p>
+                        <div class="project-tech">
+                            <span>JavaFX</span>
+                            <span>Java</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>Event Booking System</h3>
-                    <p>The Event Booking System is a simple JavaFX application designed to manage registration for various events that requires booking tickets. It allows users to book tickets, view available events, and view booked tickets. The system also provides administrative features for adding, updating, or deleting course events.</p>
-                    <div class="project-tech">
-                        <span>JavaFX</span>
-                        <span>Java</span>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="project-card" data-category="frontend">
-                <div class="project-image">
-                    <img src="assets/images/KE.png" 
-                         alt="KFUPM Events screenshot"
-                         loading="lazy"
-                         width="400"
-                         height="250">
-                    <div class="project-overlay">
-                        <span>New</span>
+                <!-- Project 3 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="assets/images/KE.png" 
+                             alt="KFUPM Events screenshot"
+                             loading="lazy"
+                             width="400"
+                             height="250">
+                        <div class="project-overlay">
+                            <span>New</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-info">
-                    <h3>KFUPM Events</h3>
-                    <p>KFUPM Events is a Figma-designed UI/UX prototype for a campus event booking system that allows KFUPM students to browse and book tickets for university events like conferences, workshops, and cultural festivals.</p>
-                    <div class="project-tech">
-                        <span>Figma</span>
+                    <div class="project-info">
+                        <h3>KFUPM Events</h3>
+                        <p>KFUPM Events is a Figma-designed UI/UX prototype for a campus event booking system that allows KFUPM students to browse and book tickets for university events like conferences, workshops, and cultural festivals.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- GitHub Repositories Section - API Integration -->
+    <section id="github-repos" class="github-section" aria-label="GitHub Repositories">
+        <div class="container">
+            <h2 class="section-title">My GitHub Projects</h2>
+            <div class="github-controls">
+                <div class="repo-filter-group">
+                    <label for="repoFilter">Filter by Language:</label>
+                    <select id="repoFilter" class="repo-filter-select">
+                        <option value="all">All Languages</option>
+                    </select>
+                </div>
+                <div class="repo-sort-group">
+                    <label for="repoSort">Sort by:</label>
+                    <select id="repoSort" class="repo-sort-select">
+                        <option value="updated">Most Recent</option>
+                        <option value="stars">Most Stars</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+            <div id="reposContainer" class="repos-grid">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Fetching my latest projects from GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section - Complex Logic -->
+    <section id="skill-quiz" class="quiz-section" aria-label="Skill Level Quiz">
+        <div class="container">
+            <h2 class="section-title">Find Your Developer Match</h2>
+            <div class="quiz-container">
+                <div class="quiz-intro" id="quizIntro">
+                    <p>Answer a few questions to see which developer path suits you best!</p>
+                    <button id="startQuizBtn" class="cta-button">Start Quiz →</button>
+                </div>
+                <div id="quizContent" style="display: none;">
+                    <div id="quizQuestion" class="quiz-question"></div>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <div id="quizProgress" class="quiz-progress"></div>
+                </div>
+                <div id="quizResult" style="display: none;" class="quiz-result"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact" aria-label="Contact section">
@@ -414,6 +488,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#github-repos">GitHub</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>

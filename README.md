@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  **Student ID: 202262140 | Assignment 2 – Interactive FeaturesIntegration**
+  **Student ID: 202262140 | Assignment 3 – Advanced Functionality**
   
   *A responsive personal portfolio website built with HTML, CSS, and JavaScript*
   
@@ -33,10 +33,10 @@ The portfolio includes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Wajza/202262140-WajdAlghamdi-assignment2.git
+git clone https://github.com/Wajza/202262140-WajdAlghamdi-assignment3.git
 
 # Navigate into the project folder
-cd 202262140-wajd-alghamdi-assignment2
+cd 202262140-wajd-alghamdi-assignment3
 
 # Open index.html in your browser
 start index.html
